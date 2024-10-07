@@ -1,0 +1,58 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.home-container {
+  height: 100%;
+}
+
+/* TOP CONATINER */
+.intro-container {
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.middle-intro-container {
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  width: 60%;
+}
+
+.right-container {
+  margin-left: 3em;
+}
+
+.down-arrow {
+  margin-inline: auto;
+  bottom: 0!important;
+}
+
+.rest-of-content {
+  background-color: #F4F4F4;
+  margin-bottom: 2em;
+}
+
+/* PROFILES CONTAINER*/
+.profiles-container {
+  display: flex;
+  padding: 2em;
+  padding-top: 5em;
+  justify-content: space-evenly;
+}
+
+.profile-img {
+  width: 300px;
+  height: auto;
+  border-radius: 150px;
+}
+
+/* QUALITIES CONTAINER */
+.qualities-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2em;
+}

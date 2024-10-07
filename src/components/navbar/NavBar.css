@@ -1,0 +1,50 @@
+.nav-root {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2em;
+  padding-top: 1em;
+}
+
+.nav-item {
+  padding: 1em;
+  position: relative;
+}
+
+.nav-text, .selected-text {
+  color: #0B117D !important;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 5px; 
+}
+
+.nav-text::after, .selected-text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #0B117D;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-text:hover::after, .selected-text:hover::after {
+  width: 100%;
+}
+
+.selected-text {
+  color: #4F90FF ! important;
+  font-weight: bold;
+}
+
+.selected-text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #4F90FF;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}

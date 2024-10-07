@@ -1,0 +1,17 @@
+.button-container {
+  padding: 1em;
+  border-radius: 24px;
+  background-color: #FFC107;
+  border: none;
+  cursor: pointer;
+  padding-inline: 2.5em;
+}
+
+.button-text {
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+.button-container::selection {
+  background-color: #F4AF37;
+}
