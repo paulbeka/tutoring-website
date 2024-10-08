@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import NavBar from "../components/navbar/NavBar";
 import './css/BaseContentCss.css';
+import Footer from "../components/footer/Footer";
 
 
 const BaseContent = () => {
@@ -22,8 +23,8 @@ const BaseContent = () => {
       <div className="main-content">
         <Outlet />
       </div>
-      <div className="footer-container">
-        
+      <div className="footer-root">
+        <Footer />
       </div>
     </div>
   )
