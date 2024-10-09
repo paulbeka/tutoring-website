@@ -7,15 +7,15 @@ const Services = () => {
     <div className="services-container">
       <div className="signup-form-container">
         <div className="form-holder">
-          <div>
-            <span>Name:</span>
+          <div className="form-subdiv">
+            <span>Name: </span>
             <input
               className="input-form"
               placeholder="Name..." 
               label="Name"
             />
           </div>
-          <div>
+          <div className="form-subdiv">
             <span>Email: </span>
             <input className="input-form" placeholder="Email..." />
           </div>
