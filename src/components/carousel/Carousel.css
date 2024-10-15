@@ -1,0 +1,22 @@
+.carousel-container {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 100%;
+  background-color: #fafafa;
+  margin: auto;
+  align-items: center;
+  margin: 1em;
+}
+
+.carousel-item {
+  padding: 1em;
+  margin: 1em;
+  width: 25%;
+  text-align: center;
+  background-color: aliceblue;
+  border-radius: 30px;
+}
+
+.carousel-arrow:hover {
+  cursor: pointer;
+}

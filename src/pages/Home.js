@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import './css/HomeCss.css';
 import BasicButton from "../components/buttons/BasicButton";
 import { IoIosArrowDown } from "react-icons/io"
 import { Link } from "react-router-dom";
+import Carousel from "../components/carousel/Carousel";
 
 
 const HomePage = () => {
+  const reviews = [
+    {"title": "Test title1", "name": "Test name", "content": "Test content"},
+    {"title": "Test title2", "name": "Test name", "content": "Test content"},
+    {"title": "Test title3", "name": "Test name", "content": "Test content"},
+    {"title": "Test title4", "name": "Test name", "content": "Test content"},
+    {"title": "Test title5", "name": "Test name", "content": "Test content"},
+    {"title": "Test title6", "name": "Test name", "content": "Test content"},
+    {"title": "Test title7", "name": "Test name", "content": "Test content"}
+  ];
+
   return (
     <div className="home-container">
       <div className="intro-container">
@@ -67,7 +78,10 @@ const HomePage = () => {
       </div>
 
       <div className="reviews-container">
-        <p> Review</p>
+        <h2 style={{ marginLeft: "1em" }}>Reviews from our Customers</h2>
+        <Carousel 
+          content={reviews}
+        /> 
       </div>
     </div>
   )
