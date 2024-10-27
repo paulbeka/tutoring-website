@@ -9,3 +9,24 @@
 .footer-root {
   width: 100%;
 }
+
+.up-arrow {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+.up-arrow.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.up-arrow.hide {
+  opacity: 0;
+  visibility: hidden;
+}

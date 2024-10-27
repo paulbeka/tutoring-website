@@ -2,9 +2,9 @@ import React from "react";
 import './BasicButton.css';
 
 
-const BasicButton = ({ text, onClick }) => {
+const BasicButton = ({ text, onClick, style }) => {
   return (
-    <button onClick={onClick} className="button-container">
+    <button style={style} onClick={onClick} className="button-container">
       <span className="button-text">{text}</span>
     </button>
   )

@@ -1,7 +1,7 @@
 .newsletter-container {
-  display: flex;
-  height: 89vh;
+  height: 85vh;
   justify-content: center;
+  margin-top: 2em;
 }
 
 .central-component {
@@ -15,20 +15,30 @@
 }
 
 .input-container {
-  
+  align-items: center;
 }
 
 .title {
   font-weight: bold;
-  font-size: 30pt;
+  font-size: 36pt;
 }
 
 .input-box { 
   border: none;
-  height: 40px;
+  height: 45px;
   margin: 1em;
   background-color: #dedede;
   width: 50%;
   font-size: 14pt;
   padding-left: 10px;
+  border-radius: 15px;
+}
+
+.newsletter-img-container {
+  width: 200px;
+  height: auto;
+}
+
+.newsletter-info-container {
+  margin: 2em;
 }

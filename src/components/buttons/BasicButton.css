@@ -5,7 +5,6 @@
   border: none;
   cursor: pointer;
   padding-inline: 2.5em;
-  box-shadow: 2px 2px;
 }
 
 .button-text {
@@ -15,5 +14,4 @@
 
 .button-container:hover {
   background-color: #F4AF37;
-  box-shadow: 1px 1px;
 }

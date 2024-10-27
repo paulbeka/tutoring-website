@@ -28,7 +28,7 @@ const HomePage = () => {
             <h2>Expert Career Coaching & Tutoring from Industry Professionals!</h2>
             <h4>Secure your dream internship or graduate job.</h4>
             <Link to={"services"}>
-              <BasicButton text={"Register Today"} onClick={() => {}} />
+              <BasicButton style={{ marginTop: "20px" }} text={"Register Today"} onClick={() => {}} />
             </Link>
           </div>
         </div>

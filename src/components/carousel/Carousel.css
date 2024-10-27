@@ -1,20 +1,26 @@
 .carousel-container {
-  display: flex;
-  justify-content: space-evenly;
-  max-width: 100%;
   background-color: #fafafa;
-  margin: auto;
+  display: flex;
   align-items: center;
-  margin: 1em;
+  padding: 1em;
+}
+
+.carousel-content {
+  overflow: hidden;
+  justify-content: space-evenly;
+  display: flex;
+  width: 90%;
 }
 
 .carousel-item {
   padding: 1em;
   margin: 1em;
   width: 25%;
+  min-width: 25%;
   text-align: center;
   background-color: aliceblue;
   border-radius: 30px;
+  transition: transform 0.5s ease;
 }
 
 .carousel-arrow:hover {

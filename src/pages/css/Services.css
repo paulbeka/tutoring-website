@@ -36,7 +36,7 @@
   width: 70%;
   height: 50px;
   border: none;
-  background-color: #dedede;
+  border-bottom: 1px solid rgb(141, 141, 141); 
 }
 
 .textarea-form {

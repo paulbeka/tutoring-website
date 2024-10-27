@@ -13,17 +13,22 @@ const NavBar = ({ selectedItem }) => {
 
   return (
     <div className="nav-root">
-      {navbarItems.map((item, index) => 
-        <div key={index}>
-          <div className="nav-item">
-            <Link to={item.path}>
-              <span className={selectedItem === item.name.toLowerCase() ? "selected-text" : "nav-text"}>
-                {item.name}
-              </span>
-            </Link>
+      <div className="logo-container">
+        <img className="img-container" src="https://acniowa.com/wp-content/uploads/2016/03/test-image.png"/>
+      </div>
+      <div className="nav-links">
+        {navbarItems.map((item, index) => 
+          <div key={index}>
+            <div className="nav-item">
+              <Link to={item.path}>
+                <span className={selectedItem === item.name.toLowerCase() ? "selected-text" : "nav-text"}>
+                  {item.name}
+                </span>
+              </Link>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>  
   )
 }
