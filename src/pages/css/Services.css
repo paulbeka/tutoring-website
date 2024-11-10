@@ -1,5 +1,5 @@
-.services-container {
-}
+/* Basic structure styling */
+.services-container {}
 
 .top-view {
   height: 90vh;
@@ -28,21 +28,50 @@
 }
 
 .form-subdiv {
+  position: relative;
   width: 100%;
+  margin-bottom: 30px;
 }
 
-.input-form {
-  padding-left: 15px;
-  width: 70%;
-  height: 50px;
+.input-form, .textarea-form {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 16px;
   border: none;
-  border-bottom: 1px solid rgb(141, 141, 141); 
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #dedede;
+  outline: none;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
 .textarea-form {
-  height: 100px;
-  border: none;
-  background-color: #dedede;
+  height: 80%;
+  margin-bottom: 0;
+}
+
+.input-form:focus, .textarea-form:focus {
+  border-bottom-color: #3498db;
+}
+
+.floating-label {
+  position: absolute;
+  left: 10px;
+  bottom: 15px;
+  font-size: 16px;
+  top: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.input-form:focus ~ .floating-label,
+.input-form:not(:placeholder-shown) ~ .floating-label,
+.textarea-form:focus ~ .floating-label,
+.textarea-form:not(:placeholder-shown) ~ .floating-label {
+  transform: translateY(-42px);
+  color: #3498db;
 }
 
 .input-button {
@@ -50,16 +79,16 @@
   border: none;
   cursor: pointer;
   height: 50px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .input-button:hover {
   background-color: #dedede;
+  color: #3498db;
 }
-
-.input-button::selection {
-  background-color: gray;
-}
-
 
 .error-div {
   background-color: #ccc;
@@ -72,7 +101,6 @@
   color: red;
   font-weight: bold;
 }
-
 
 .our-services-list-container {
   display: flex;

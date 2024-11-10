@@ -36,21 +36,24 @@ const Services = () => {
       <div className="top-view">
         <div className="text-holder">
           <h1>Register with us!</h1>
-          <p>Lorem ipsum dolor si amet</p>
+          <p>Lorem ipsum dolor sit amet</p>
         </div>
         <div className="signup-form-container">
           <div className="form-holder">    
             <div className="form-subdiv">
-              <span>Name: </span>
-              <input onChange={setName} className="input-form" placeholder="Name..."  label="Name" />
+              <input onChange={setName} className="input-form" placeholder=" " required />
+              <label className="floating-label">Name</label>
             </div>
             <div className="form-subdiv">
-              <span>Email: </span>
-              <input onChange={setEmail} className="input-form" placeholder="Email..." />
+              <input onChange={setEmail} className="input-form" placeholder=" " required />
+              <label className="floating-label">Email</label>
             </div>
           </div>
           <div className="form-holder">
-            <textarea onChange={setDescription} className="textarea-form" placeholder="What do you need..."/>
+            <div className="form-subdiv">
+              <textarea onChange={setDescription} className="textarea-form" placeholder=" " required></textarea>
+              <label className="floating-label">What do you need...</label>
+            </div>
             <button className="input-button" onClick={register}>Register Now</button>
           </div>
         </div>

@@ -1,0 +1,28 @@
+.blog-container {
+  min-height: 100vh;
+}
+
+.top-title-blog-container {
+  display: flex;
+}
+
+.blog-posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  margin-inline: 3em;
+}
+
+.post-box {
+  background: rgb(166, 199, 222);
+  width: 12%;
+  aspect-ratio : 1 / 1;
+  padding: 3em;
+  margin: 2em;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.post-box:hover {
+  background: rgb(196, 214, 227);
+}

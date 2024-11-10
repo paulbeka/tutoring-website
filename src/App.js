@@ -5,6 +5,7 @@ import Services from './pages/Services';
 import Blog from './pages/Blog';
 import Newsletter from './pages/Newsletter';
 import PageNotFound from './pages/PageNotFound';
+import BlogPage from './pages/BlogPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/newsletter" element={<Newsletter />} />
+          <Route path="/blog-post/:id" element={<BlogPage />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
