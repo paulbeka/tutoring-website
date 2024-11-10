@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './NavBar.css';
+import { isMobile } from 'react-device-detect';
 
-
-const NavBar = ({ selectedItem }) => {
+const NavBar = ({ selectedItem, toggleSidebar }) => {
   const navbarItems = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services"},
@@ -11,7 +11,8 @@ const NavBar = ({ selectedItem }) => {
     { name: "Newsletter", path: "/newsletter"}
   ]
 
-  return (
+  return (<>
+    {!isMobile ? 
     <div className="nav-root">
       <div className="logo-container">
         <img className="img-container" src="https://acniowa.com/wp-content/uploads/2016/03/test-image.png"/>
@@ -29,8 +30,22 @@ const NavBar = ({ selectedItem }) => {
           </div>
         )}
       </div>
-    </div>  
-  )
+    </div> :
+    <div className="nav-root-mobile">
+      <div className="nav-content-mobile">
+        {navbarItems.map((item, index) => 
+          <div key={index}>
+            <Link to={item.path} onClick={() => toggleSidebar(false)}>
+              <span className={selectedItem === item.name.toLowerCase() ? "nav-text-mobile-selected" : "nav-text-mobile"}>
+                {item.name}
+              </span>
+            </Link>
+          </div>  
+        )}
+      </div>
+    </div>
+    }
+  </>)
 }
 
 export default NavBar;

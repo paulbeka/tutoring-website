@@ -23,10 +23,10 @@ const Blog = () => {
       <div className="blog-posts-container">
         {posts.map((post) => {
           return (
-            <Link to={{
+            <Link className="post-box" to={{
               pathname: `/blog-post/${post.id}`
             }}>
-              <div className="post-box">
+              <div>
                 <h4>{post.title}</h4>
                 <p>{post.description}</p>
               </div>

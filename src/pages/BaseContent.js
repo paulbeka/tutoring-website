@@ -4,12 +4,15 @@ import NavBar from "../components/navbar/NavBar";
 import './css/BaseContentCss.css';
 import Footer from "../components/footer/Footer";
 import { IoIosArrowDropupCircle } from "react-icons/io";
+import { isMobile } from 'react-device-detect';
+import Hamburger from 'hamburger-react'
 
 const BaseContent = () => {
 
   const location = useLocation();
   const [currentPage, setCurrentPage] = useState('home');
   const [isVisibleUpArrow, setIsVisibleUpArrow] = useState(false);
+  const [displayBar, setDisplayBar] = useState(!isMobile);
 
   useEffect(() => {
     const path = location.pathname.replace('/', '');
@@ -34,10 +37,14 @@ const BaseContent = () => {
 
   return (
     <div className="main-container">
+      {displayBar && 
       <div className="navbar-container">
-        <NavBar selectedItem={currentPage} />
-      </div>
-      <div className="main-content">
+        <NavBar selectedItem={currentPage} toggleSidebar={setDisplayBar}/>
+      </div>}
+      <div className={displayBar ? "pageContentWithSidebar": "pageContentNoSidebar"} style={{"height" : "100%"}}>
+        {isMobile ? 
+        <div style={{"position":"fixed", "top":"1em", "left": "0.5em", "zIndex":"99"}}><Hamburger toggled={displayBar} toggle={setDisplayBar} aria-label="sidebar open button" /></div>:
+        <></>}
         <Outlet />
       </div>
       <div className="footer-root">

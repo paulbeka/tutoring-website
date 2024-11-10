@@ -3,22 +3,25 @@
 }
 
 .top-title-blog-container {
-  display: flex;
+  margin-left: 4em;
+  margin-top: 3em;
 }
 
 .blog-posts-container {
   display: flex;
   flex-wrap: wrap;
   height: auto;
-  margin-inline: 3em;
+  padding-inline: 3em;
+  padding-block: 1em;
+  background-color: #F4F4F4;
 }
 
 .post-box {
-  background: rgb(166, 199, 222);
+  background: rgb(194, 221, 240);
   width: 12%;
   aspect-ratio : 1 / 1;
-  padding: 3em;
-  margin: 2em;
+  padding: 2em;
+  margin: 1em;
   border-radius: 40px;
   cursor: pointer;
 }
