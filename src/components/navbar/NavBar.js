@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import './NavBar.css';
 import { isMobile } from 'react-device-detect';
 
-const NavBar = ({ selectedItem, toggleSidebar }) => {
+const NavBar = ({ selectedItem, toggleSidebar  }) => {
   const navbarItems = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services"},
