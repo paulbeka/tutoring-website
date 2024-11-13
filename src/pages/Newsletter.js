@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/Newsletter.css";
 import BasicButton from "../components/buttons/BasicButton";
-
+import { BrowserView, MobileView } from "react-device-detect";
 
 const Newsletter = () => {
 
@@ -29,7 +29,6 @@ const Newsletter = () => {
           <p>Lorem ipsum dolor si amet</p>
         </div>
     </div>
-    
   )
 }
 

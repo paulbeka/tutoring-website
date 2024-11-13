@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import './NavBar.css';
 import { isMobile } from 'react-device-detect';
 
-const NavBar = ({ selectedItem, toggleSidebar  }) => {
+const NavBar = ({ selectedItem, isOpen, toggleSidebar  }) => {
   const navbarItems = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services"},
@@ -31,7 +31,7 @@ const NavBar = ({ selectedItem, toggleSidebar  }) => {
         )}
       </div>
     </div> :
-    <div className="nav-root-mobile">
+    <div className={`nav-root-mobile ${isOpen ? '' : 'open'}`}>
       <div className="nav-content-mobile">
         {navbarItems.map((item, index) => 
           <div key={index}>

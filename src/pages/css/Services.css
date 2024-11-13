@@ -116,3 +116,44 @@
 .service-offer:last-child {
   border-right: none; 
 }
+
+
+@media (max-width: 700px) {
+  .our-services-list-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-offer {
+    width: 100%;
+    border: none;
+    margin-bottom: 1em;
+  }
+
+  .top-view {
+    height: auto;
+  }
+
+  .text-holder {
+    margin-top: 4em;
+  }
+
+  .signup-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: unset;
+    padding-top: 1em;
+    height: auto;
+  }
+
+  .input-form, .textarea-form, .input-button {
+    width: 80%;
+  }
+
+  .floating-label {
+    margin-left: 7%;
+  }
+
+}

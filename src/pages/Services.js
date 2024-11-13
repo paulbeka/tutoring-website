@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./css/Services.css";
+import { BrowserView, MobileView } from "react-device-detect";
 
 
 const Services = () => {
@@ -33,13 +34,43 @@ const Services = () => {
 
   return (
     <div className="services-container">
-      <div className="top-view">
-        <div className="text-holder">
-          <h1>Register with us!</h1>
-          <p>Lorem ipsum dolor sit amet</p>
+      <BrowserView>
+        <div className="top-view">
+          <div className="text-holder">
+            <h1>Register with us!</h1>
+            <p>Lorem ipsum dolor sit amet</p>
+          </div>
+          <div className="signup-form-container">
+            <div className="form-holder">    
+              <div className="form-subdiv">
+                <input onChange={setName} className="input-form" placeholder=" " required />
+                <label className="floating-label">Name</label>
+              </div>
+              <div className="form-subdiv">
+                <input onChange={setEmail} className="input-form" placeholder=" " required />
+                <label className="floating-label">Email</label>
+              </div>
+            </div>
+            <div className="form-holder">
+              <div className="form-subdiv">
+                <textarea onChange={setDescription} className="textarea-form" placeholder=" " required></textarea>
+                <label className="floating-label">What do you need...</label>
+              </div>
+              <button className="input-button" onClick={register}>Register Now</button>
+            </div>
+          </div>
+          {error ? <div className="error-div">
+            <p className="error-text">{error}</p>
+          </div> : <></>}
         </div>
-        <div className="signup-form-container">
-          <div className="form-holder">    
+      </BrowserView>
+      <MobileView>
+        <div className="top-view">
+          <div className="text-holder">
+            <h1>Register with us!</h1>
+            <p>Lorem ipsum dolor sit amet</p>
+          </div>
+          <div className="signup-form-container">
             <div className="form-subdiv">
               <input onChange={setName} className="input-form" placeholder=" " required />
               <label className="floating-label">Name</label>
@@ -48,8 +79,6 @@ const Services = () => {
               <input onChange={setEmail} className="input-form" placeholder=" " required />
               <label className="floating-label">Email</label>
             </div>
-          </div>
-          <div className="form-holder">
             <div className="form-subdiv">
               <textarea onChange={setDescription} className="textarea-form" placeholder=" " required></textarea>
               <label className="floating-label">What do you need...</label>
@@ -57,10 +86,7 @@ const Services = () => {
             <button className="input-button" onClick={register}>Register Now</button>
           </div>
         </div>
-        {error ? <div className="error-div">
-          <p className="error-text">{error}</p>
-        </div> : <></>}
-      </div>
+      </MobileView>
       <div className="our-services-list-container">
         <div className="service-offer">
           <h2>Computer Science</h2>

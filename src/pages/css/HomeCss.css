@@ -59,9 +59,7 @@ html {
 
 /* Responsive styling for mobile screens */
 @media (max-width: 700px) {
-  .home-container {
-    padding: 10px;
-  }
+
 
   .intro-container {
     align-items: center;
@@ -71,7 +69,7 @@ html {
 
   .middle-intro-container {
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     align-items: center;
   } 
 
@@ -124,8 +122,15 @@ html {
     padding: 1em;
   }
 
+  .quality {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   img {
     max-width: 100%!important;
     height: auto;
   }
+
 }

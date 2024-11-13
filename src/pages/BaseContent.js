@@ -39,7 +39,7 @@ const BaseContent = () => {
     <div className="main-container">
       {displayBar && 
       <div className="navbar-container">
-        <NavBar selectedItem={currentPage} toggleSidebar={setDisplayBar}/>
+        <NavBar selectedItem={currentPage} toggleSidebar={setDisplayBar} isOpen={displayBar}/>
       </div>}
       <div className={displayBar ? "pageContentWithSidebar": "pageContentNoSidebar"} style={{"height" : "100%"}}>
         {isMobile ? 

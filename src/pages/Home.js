@@ -118,6 +118,15 @@ const HomePage = () => {
             <p>Lorem ipsum dolor si amet</p>
           </div>
         </div>
+        <div className="profiles-container">
+          <div className="person-container">
+            <center>
+              <img className="profile-img" src="https://acniowa.com/wp-content/uploads/2016/03/test-image.png" alt="Profile" />
+              <h3>Katarzyna Pastuszka</h3>
+            </center>
+            <p>Lorem ipsum dolor si amet</p>
+          </div>
+        </div>
 
         <div>
           <h1 style={{ margin: "1em" }}>Why Choose Us</h1>
